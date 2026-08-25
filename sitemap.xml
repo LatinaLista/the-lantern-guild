@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://latinalista.github.io/the-lantern-guild/membership/</loc>
+    <lastmod>2026-08-25T18:15:21.896Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://latinalista.github.io/the-lantern-guild/ethics/</loc>
     <lastmod>2026-08-25T18:15:13.198Z</lastmod>
     <changefreq>weekly</changefreq>
