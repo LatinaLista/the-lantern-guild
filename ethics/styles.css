@@ -1,0 +1,156 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #ffffff;
+      background: #0a0e27;
+      overflow-x: hidden;
+      position: relative;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      top: 50%;
+      right: -200px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(0, 217, 255, 0.15) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+      animation: floatGlow 8s ease-in-out infinite;
+      z-index: 0;
+    }
+    @keyframes floatGlow {
+      0%, 100% { transform: translateY(0px) translateX(0px); opacity: 0.15; }
+      50% { transform: translateY(-50px) translateX(-30px); opacity: 0.25; }
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 3rem;
+      background: rgba(10, 14, 39, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(0, 217, 255, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .logo {
+      font-size: 26px;
+      font-weight: 700;
+      background: linear-gradient(135deg, #00d9ff, #c41e3a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.5px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 1.5rem;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.3s;
+      position: relative;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #00d9ff, #c41e3a);
+      transition: width 0.3s;
+    }
+    nav a:hover::after { width: 100%; }
+    nav a:hover { color: #00d9ff; }
+    .menu-toggle { display: none; color: #00d9ff; font-size: 24px; line-height: 1; padding: 6px 12px; border: 1px solid rgba(0, 217, 255, 0.35); border-radius: 6px; cursor: pointer; user-select: none; }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 6rem 3rem;
+      position: relative;
+      z-index: 1;
+    }
+    h1 {
+      font-size: 48px;
+      font-weight: 800;
+      margin-bottom: 3rem;
+      background: linear-gradient(135deg, #c41e3a, #00d9ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .ethics-item {
+      background: linear-gradient(135deg, rgba(196, 30, 58, 0.12), rgba(0, 217, 255, 0.08));
+      border: 1px solid rgba(196, 30, 58, 0.3);
+      padding: 2.5rem;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .ethics-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #c41e3a, #00d9ff);
+      transform: scaleX(0);
+      transform-origin: left;
+      animation: expandWidth 0.8s ease-out forwards;
+    }
+    @keyframes expandWidth {
+      to { transform: scaleX(1); }
+    }
+    .ethics-item:hover {
+      transform: translateX(8px);
+      border-color: #00d9ff;
+      box-shadow: 0 10px 40px rgba(0, 217, 255, 0.15);
+    }
+    .ethics-item h3 {
+      font-size: 22px;
+      margin-bottom: 1rem;
+      color: #ffd700;
+      position: relative;
+      z-index: 1;
+    }
+    .ethics-item p {
+      color: #b0b8cc;
+      font-size: 16px;
+      line-height: 1.7;
+      position: relative;
+      z-index: 1;
+    }
+    footer {
+      background: rgba(0, 0, 0, 0.5);
+      color: #b0b8cc;
+      padding: 3rem;
+      text-align: center;
+      border-top: 1px solid rgba(0, 217, 255, 0.1);
+      font-size: 14px;
+      margin-top: 4rem;
+    }
+    footer a {
+      color: #00d9ff;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    footer a:hover { color: #ffd700; }
+    @media (max-width: 768px) {
+      header { padding: 1.25rem 1.5rem; }
+      .menu-toggle { display: block; }
+      nav { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; background: rgba(10, 14, 39, 0.98); border-bottom: 1px solid rgba(0, 217, 255, 0.15); padding: 0.5rem 0 1rem; }
+      nav.open { display: flex; }
+      nav a { margin: 0; padding: 0.9rem 1.5rem; }
+      .container { padding: 3rem 1.5rem; }
+      h1 { font-size: 36px; }
+      .ethics-item { padding: 1.75rem; }
+    }
