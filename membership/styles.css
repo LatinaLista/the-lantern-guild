@@ -133,7 +133,6 @@
     .seal-version img { width: 180px; height: 180px; display: block; margin: 0 auto 0.75rem; }
     .seal-version span { font-size: 13px; color: #b0b8cc; }
     .seal-version-light span { color: #0a0e27; }
-    .seal-snippet { background: rgba(0, 0, 0, 0.45); border: 1px solid rgba(0, 217, 255, 0.2); border-radius: 6px; padding: 1rem; font-family: 'Courier New', monospace; font-size: 13px; line-height: 1.6; color: #b0b8cc; overflow-x: auto; white-space: pre; margin-bottom: 0; }
     footer {
       background: rgba(0, 0, 0, 0.5);
       color: #b0b8cc;
