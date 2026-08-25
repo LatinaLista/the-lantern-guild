@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://LatinaLista.github.io/the-lantern-guild/sitemap.xml
+Sitemap: https://thelanternguild.org/sitemap.xml
