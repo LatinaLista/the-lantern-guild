@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://thelanternguild.org/ethics/</loc>
+    <lastmod>2026-08-25T22:05:22.421Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://thelanternguild.org/</loc>
     <lastmod>2026-08-25T22:05:15.836Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -13,11 +18,6 @@
   <url>
     <loc>https://thelanternguild.org/membership/</loc>
     <lastmod>2026-08-25T22:05:00.748Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://thelanternguild.org/ethics/</loc>
-    <lastmod>2026-08-25T22:04:54.000Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>
