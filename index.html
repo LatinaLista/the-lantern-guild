@@ -338,7 +338,21 @@
         <button class="btn-primary" onclick="document.getElementById('tools').scrollIntoView({behavior:'smooth'})">Explore Tools</button>
         <button class="btn-secondary" onclick="document.getElementById('apply').scrollIntoView({behavior:'smooth'})">Become a Member</button>
       </div>
+      <a href="#film" class="watch-film-link" onclick="event.preventDefault();document.getElementById('film').scrollIntoView({behavior:'smooth'})"><span class="play-dot" aria-hidden="true">&#9654;</span> Watch the film <span class="film-length">1:28</span></a>
     </div>
+  </section>
+
+  <section id="film" class="film-section">
+    <p class="film-eyebrow">A short film</p>
+    <h2 class="section-title film-title">Carry the Light</h2>
+    <p class="film-intro">In 1775, one lantern was enough to wake a countryside. Today the danger arrives through every screen we touch, and the signal still matters.</p>
+    <div class="film-frame">
+      <video controls playsinline preload="none" poster="https://thelanternguild.org/media/carry-the-light-poster.jpg" aria-label="Carry the Light, a short film about The Lantern Guild">
+        <source src="https://thelanternguild.org/media/carry-the-light.mp4" type="video/mp4">
+        Your browser can't play this video. <a href="https://thelanternguild.org/media/carry-the-light.mp4">Download it here.</a>
+      </video>
+    </div>
+    <p class="film-note">1:28 &middot; Captioned &middot; Made with AI</p>
   </section>
 
   <section id="mission" class="gradient-bg">
