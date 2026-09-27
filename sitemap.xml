@@ -2,22 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://thelanternguild.org/</loc>
-    <lastmod>2026-08-25T22:35:38.985Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://thelanternguild.org/privacy/</loc>
-    <lastmod>2026-08-25T22:05:36.113Z</lastmod>
+    <lastmod>2026-09-27T12:43:26.699Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://thelanternguild.org/membership/</loc>
-    <lastmod>2026-08-25T22:05:29.541Z</lastmod>
+    <lastmod>2026-09-26T17:20:38.452Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://thelanternguild.org/ethics/</loc>
-    <lastmod>2026-08-25T22:05:22.421Z</lastmod>
+    <lastmod>2026-09-26T17:19:22.860Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://thelanternguild.org/privacy/</loc>
+    <lastmod>2026-09-22T16:42:02.558Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>
