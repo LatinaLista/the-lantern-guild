@@ -133,6 +133,9 @@
     .seal-version img { width: 180px; height: 180px; display: block; margin: 0 auto 0.75rem; }
     .seal-version span { font-size: 13px; color: #b0b8cc; }
     .seal-version-light span { color: #0a0e27; }
+    .apply-btn { display: inline-block; padding: 14px 32px; background: linear-gradient(135deg, #c41e3a, #ff1744); color: #ffffff; text-decoration: none; border-radius: 8px; font-weight: 700; font-size: 16px; box-shadow: 0 0 30px rgba(196, 30, 58, 0.45); transition: all 0.3s; }
+    .apply-btn:hover { transform: translateY(-3px); box-shadow: 0 0 45px rgba(196, 30, 58, 0.75); }
+    .apply-cta { margin-top: 4rem; padding: 3rem 2rem; text-align: center; border-radius: 14px; border: 1px solid rgba(0, 217, 255, 0.25); background: linear-gradient(135deg, rgba(196, 30, 58, 0.15), rgba(0, 217, 255, 0.08)); }
     footer {
       background: rgba(0, 0, 0, 0.5);
       color: #b0b8cc;
