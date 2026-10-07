@@ -298,17 +298,18 @@
     }
   });
 })();
-</script>  <link rel="stylesheet" href="styles.css">
+</script>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <div class="logo" onclick="window.location.href='https://app.causealytics.com/p/dkr4953'">⚡ The Lantern Guild</div>
+    <div class="logo" onclick="window.location.href='https://thelanternguild.org/'">⚡ The Lantern Guild</div>
     <div class="menu-toggle" role="button" aria-label="Menu" aria-expanded="false" tabindex="0">☰</div>
     <nav>
-      <a href="https://app.causealytics.com/p/dkr4953">Home</a>
-      <a href="https://app.causealytics.com/p/dkr4953#mission">Mission</a>
-      <a href="https://app.causealytics.com/p/FzKmqSc">Ethics</a>
-      <a href="https://app.causealytics.com/p/csVX4mS">Membership</a>
+      <a href="https://thelanternguild.org/">Home</a>
+      <a href="https://thelanternguild.org/#mission">Mission</a>
+      <a href="https://thelanternguild.org/ethics/">Ethics</a>
+      <a href="https://thelanternguild.org/membership/">Membership</a>
     </nav>
   </header>
 
@@ -401,19 +402,48 @@
   <footer>
     <p>&copy; 2026 The Lantern Guild. All rights reserved.</p>
     <p style="margin-top: 1rem;">
-      <a href="https://app.causealytics.com/p/dkr4953">Home</a> • 
-      <a href="https://app.causealytics.com/p/FzKmqSc">Code of Ethics</a> • 
-      <a href="https://app.causealytics.com/p/csVX4mS">Membership</a> • 
-      <a href="https://app.causealytics.com/p/sRnmwWJhD">Privacy</a> • 
-      <a href="mailto:admin@causealytics.com">Contact</a>
+      <a href="https://thelanternguild.org/">Home</a> • 
+      <a href="https://thelanternguild.org/ethics/">Code of Ethics</a> • 
+      <a href="https://thelanternguild.org/membership/">Membership</a> • 
+      <a href="https://thelanternguild.org/privacy/">Privacy</a> • 
+      <a href="mailto:admin@thelanternguild.org">Contact</a>
     </p>
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   
-  
+  <script>
+    (function () {
+      var toggle = document.querySelector('.menu-toggle');
+      var nav = document.querySelector('nav');
+      function setOpen(open) { nav.classList.toggle('open', open); toggle.setAttribute('aria-expanded', open ? 'true' : 'false'); }
+      toggle.addEventListener('click', function () { setOpen(!nav.classList.contains('open')); });
+      toggle.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setOpen(!nav.classList.contains('open')); } });
+      nav.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setOpen(false); }); });
+    })();
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from("h1", { duration: 1, opacity: 0, y: 40, ease: "power3.out" });
+    gsap.utils.toArray("h2").forEach((heading, index) => {
+      gsap.from(heading, {
+        scrollTrigger: { trigger: heading, start: "top 80%" },
+        duration: 0.8,
+        opacity: 0,
+        x: -30,
+        delay: index * 0.1,
+        ease: "power2.out"
+      });
+    });
+    gsap.utils.toArray(".highlight").forEach((box) => {
+      gsap.from(box, {
+        scrollTrigger: { trigger: box, start: "top 75%" },
+        duration: 0.8,
+        opacity: 0,
+        y: 30,
+        ease: "power2.out"
+      });
+    });
+  </script>
   <script src="https://app.causealytics.com/widget.js" data-widget="46226018" async></script>
-  <script src="script.js"></script>
 </body>
 </html>
