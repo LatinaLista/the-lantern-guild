@@ -298,17 +298,18 @@
     }
   });
 })();
-</script>  <link rel="stylesheet" href="styles.css">
+</script>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <div class="logo" onclick="window.location.href='https://app.causealytics.com/p/dkr4953'">⚡ The Lantern Guild</div>
+    <div class="logo" onclick="window.location.href='https://thelanternguild.org/'">⚡ The Lantern Guild</div>
     <div class="menu-toggle" role="button" aria-label="Menu" aria-expanded="false" tabindex="0">☰</div>
     <nav>
-      <a href="https://app.causealytics.com/p/dkr4953">Home</a>
-      <a href="https://app.causealytics.com/p/dkr4953#mission">Mission</a>
-      <a href="https://app.causealytics.com/p/FzKmqSc">Ethics</a>
-      <a href="https://app.causealytics.com/p/csVX4mS">Membership</a>
+      <a href="https://thelanternguild.org/">Home</a>
+      <a href="https://thelanternguild.org/#mission">Mission</a>
+      <a href="https://thelanternguild.org/ethics/">Ethics</a>
+      <a href="https://thelanternguild.org/membership/">Membership</a>
     </nav>
   </header>
 
@@ -375,21 +376,29 @@
     <p>If we change this policy, we will update the effective date at the top of this page. Material changes will be announced to the updates list.</p>
 
     <h2>Contact</h2>
-    <p>Questions, requests, or concerns about privacy: <a href="mailto:admin@causealytics.com">admin@causealytics.com</a></p>
+    <p>Questions, requests, or concerns about privacy: <a href="mailto:admin@thelanternguild.org">admin@thelanternguild.org</a></p>
   </div>
 
   <footer>
     <p>&copy; 2026 The Lantern Guild. All rights reserved.</p>
     <p style="margin-top: 1rem;">
-      <a href="https://app.causealytics.com/p/dkr4953">Home</a> • 
-      <a href="https://app.causealytics.com/p/FzKmqSc">Code of Ethics</a> • 
-      <a href="https://app.causealytics.com/p/csVX4mS">Membership</a> • 
-      <a href="mailto:admin@causealytics.com">Contact</a>
+      <a href="https://thelanternguild.org/">Home</a> • 
+      <a href="https://thelanternguild.org/ethics/">Code of Ethics</a> • 
+      <a href="https://thelanternguild.org/membership/">Membership</a> • 
+      <a href="mailto:admin@thelanternguild.org">Contact</a>
     </p>
   </footer>
 
-  
+  <script>
+    (function () {
+      var toggle = document.querySelector('.menu-toggle');
+      var nav = document.querySelector('nav');
+      function setOpen(open) { nav.classList.toggle('open', open); toggle.setAttribute('aria-expanded', open ? 'true' : 'false'); }
+      toggle.addEventListener('click', function () { setOpen(!nav.classList.contains('open')); });
+      toggle.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setOpen(!nav.classList.contains('open')); } });
+      nav.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setOpen(false); }); });
+    })();
+  </script>
   <script src="https://app.causealytics.com/widget.js" data-widget="46226018" async></script>
-  <script src="script.js"></script>
 </body>
 </html>
